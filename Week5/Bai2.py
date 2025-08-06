@@ -1,7 +1,3 @@
-# hello123 world456
-# abc abc 999
-# python3 java8
-
 a = input().split()
 b = set()
 c = []

@@ -1,17 +1,21 @@
-n = int(input())
-a = input().split()
-c = []
-b = []
-for x in a:
-    c.append(int(x))
+def arrayInput():
+    n = int(input())
+    a = input().split()
+    c = []
+    for x in a:
+        c.append(int(x))
+    return c
 
-print(c)
-# while len(b) < n:
+
+arr = arrayInput()
+res = []
 x = 1
 i = 0
-while x != c[i] and len(b) < n:
-    b.append(x)
-    x += 1
-i += 1
+while len(res) < len(arr):
+    while i < len(arr):
+        if x != arr[i]:
+            res.append(x)
+            i += 1
+        x += 1
 
-print(b)
+print(res[len(arr) - 1])
